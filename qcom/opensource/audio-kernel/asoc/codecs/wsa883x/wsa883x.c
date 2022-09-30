@@ -1963,7 +1963,7 @@ static int wsa883x_event_notify(struct notifier_block *nb,
 	if (!wsa883x)
 		return -EINVAL;
 
-	dev_dbg(wsa883x->dev, "%s: event %d\n", __func__, event);
+	dev_dbg(wsa883x->dev, "%s: event %d, wsa883x->comp_enable %d\n", __func__, event, wsa883x->comp_enable);
 	switch (event) {
 	case BOLERO_SLV_EVT_PA_OFF_PRE_SSR:
 		if (test_bit(SPKR_STATUS, &wsa883x->status_mask))
@@ -2021,7 +2021,7 @@ static int wsa883x_event_notify(struct notifier_block *nb,
 			__func__, event);
 		break;
 	}
-
+	dev_dbg(wsa883x->dev, "%s: exit\n", __func__);
 	return 0;
 }
 
