@@ -4,9 +4,9 @@ endif
 
 # add -Wall to try to catch everything we can.
 EXTRA_CFLAGS += -Wall
-EXTRA_CFLAGS += -I$(ANDROID_BUILD_TOP)/motorola/kernel/modules/include
+EXTRA_CFLAGS += -I$(KERNEL_SRC)/../sm6450-modules/motorola/modules/include
 EXTRA_CFLAGS += -I$(ANDROID_BUILD_TOP)/kernel_platform/common
-EXTRA_CFLAGS += -I$(ANDROID_BUILD_TOP)/motorola/kernel/modules/drivers/moto_sched
+EXTRA_CFLAGS += -I$(KERNEL_SRC)/../sm6450-modules/motorola/modules/drivers/moto_sched
 
 ifneq ($(filter m y,$(CONFIG_MTK_SCHED_VIP_TASK)),)
 EXTRA_CFLAGS += -I$(ANDROID_BUILD_TOP)/kernel-6.1
