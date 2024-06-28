@@ -52,8 +52,6 @@ endif
 
 ifneq (,$(findstring hiphi, $(TARGET_PRODUCT)))
 include $(CAMERA_KERNEL_ROOT)/config/hiphi.mk
-else ifneq (,$(findstring li, $(TARGET_PRODUCT)))
-include $(CAMERA_KERNEL_ROOT)/config/li.mk
 else ifneq (,$(findstring oneli, $(TARGET_PRODUCT)))
 include $(CAMERA_KERNEL_ROOT)/config/oneli.mk
 else ifneq (,$(findstring eqs, $(TARGET_PRODUCT)))
@@ -92,6 +90,8 @@ else ifneq (,$(findstring tank_factory, $(TARGET_PRODUCT)))
 include $(CAMERA_KERNEL_ROOT)/config/tank_factory.mk
 else ifneq (,$(findstring tank, $(TARGET_PRODUCT)))
 include $(CAMERA_KERNEL_ROOT)/config/tank.mk
+else ifneq (,$(findstring li, $(TARGET_PRODUCT)))
+include $(CAMERA_KERNEL_ROOT)/config/li.mk
 endif
 
 # List of all camera-kernel headers
